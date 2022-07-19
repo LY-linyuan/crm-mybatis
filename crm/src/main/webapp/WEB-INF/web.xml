@@ -22,6 +22,11 @@
     <url-pattern>*.do</url-pattern>
     <url-pattern>*.jsp</url-pattern>
   </filter-mapping>
+
+  <!--监听器-->
+  <listener>
+    <listener-class>com.bjpowernode.crm.web.listener.SysInitListener</listener-class>
+  </listener>
   
 
   <!--登录控制器-->
