@@ -30,6 +30,13 @@ success: function () {
 String createTime = DateTimeUtil.getSysTime();
 String createBy = ((User)request.getSession().getAttribute("user")).getName();
 
-
+$(".time").datetimepicker({
+minView: "month",
+language:  'zh-CN',
+format: 'yyyy-mm-dd',
+autoclose: true,
+todayBtn: true,
+pickerPosition: "bottom-left"
+});
 </body>
 </html>
