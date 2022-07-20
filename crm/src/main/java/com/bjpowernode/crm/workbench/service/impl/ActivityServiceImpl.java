@@ -120,6 +120,12 @@ public class ActivityServiceImpl implements ActivityService {
     }
 
     @Override
+    public List<Activity> getActivityListByClueId(String clueID) {
+        List<Activity> activityList = activityDao.getActivityListByClueId(clueID);
+        return activityList;
+    }
+
+    @Override
     public boolean updateRemark(ActivityRemark activityRemark) {
         boolean flag = true;
         int count = activityRemarkDao.updateRemark(activityRemark);
@@ -127,5 +133,11 @@ public class ActivityServiceImpl implements ActivityService {
             flag = false;
         }
         return flag;
+    }
+
+    @Override
+    public List<Activity> getActivityListByNameAndNotByClueId(Map<String, String> map) {
+        List<Activity> activityList = activityDao.getActivityListByNameAndNotByClueId(map);
+        return activityList;
     }
 }
