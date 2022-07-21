@@ -38,5 +38,25 @@ autoclose: true,
 todayBtn: true,
 pickerPosition: "bottom-left"
 });
+
+id
+owner
+money
+name
+expectedDate
+customerId
+stage
+type
+source
+activityId
+contactsId
+createBy
+createTime
+editBy
+editTime
+description
+contactSummary
+nextContactTime
+
 </body>
 </html>
