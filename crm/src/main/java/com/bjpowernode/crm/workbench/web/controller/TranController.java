@@ -52,7 +52,17 @@ public class TranController extends HttpServlet {
             getHistoryListByTranId(request, response);
         } else if ("/workbench/transaction/changeStage.do".equals(servletPath)) {
             changeStage(request, response);
+        } else if ("/workbench/transaction/getCharts.do".equals(servletPath)) {
+            getCharts(request, response);
         }
+
+    }
+
+    private void getCharts(HttpServletRequest request, HttpServletResponse response) {
+        System.out.println("取得交易阶段数量统计图表的数据");
+        TranService ts = (TranService) ServiceFactory.getService(new TranServiceImpl());
+        Map<String, Object> map = ts.getCharts();
+        PrintJson.printJsonObj(response, map);
 
     }
 
